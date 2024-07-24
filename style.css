@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.gameBoard{
+    background-color: darkslategray;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+}
+
+.cell{
+    width: 70px;
+    height: 70px;
+    background-color: aqua;
+    border: 2px solid rebeccapurple;
+}
+
+h1{
+    text-align: center;
+    background-color: aqua;
+}
