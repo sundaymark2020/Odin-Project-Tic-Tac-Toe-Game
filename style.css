@@ -6,6 +6,7 @@
 
 .gameBoard{
     background-color: darkslategray;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     color: whitesmoke;
@@ -15,10 +16,15 @@
 }
 
 .cell{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: aqua;
     border: 2px solid rebeccapurple;
+    cursor: pointer;
+    color: darkslategray ;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
 }
 
 h1{
