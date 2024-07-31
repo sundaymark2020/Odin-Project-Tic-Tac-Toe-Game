@@ -1,6 +1,5 @@
 
 const cells = document.querySelectorAll('.cells');
-const gamestatus = document.querySelector(".gamestatus");
 const resetBtn = document.querySelector('.reset');
 //conditions for winning the game//
 const winningconditions = [
@@ -16,6 +15,23 @@ const winningconditions = [
 
 //each empty array represent each ell//
 
-let optionCell = ['','','','','','','','',''];
+let board = ['','','','','','','','',''];
+let playerOne = 'X';
+let playerTwo  = 'O';
+let currentTurn = playerOne;
+
+cells.forEach((cell, index) => {
+    cell.addEventListener('click',() =>{
+        board[index] = currentTurn
+        if(currentTurn == playerOne){
+
+        }
+
+    })
+
+    
+})
+
+
 
 
