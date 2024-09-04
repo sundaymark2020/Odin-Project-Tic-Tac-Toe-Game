@@ -62,9 +62,23 @@ function checkWinner() {
   });
 }
 
+function checkTie(){
+  const winner = document.body.querySelector(".winner");
+  const isBoadFull = board.every((cell)=> cell !== '' )
+  if (isBoadFull && winner.innerText == '') {
+  winner.innerText = 'it a tie no winner';
+
+  endGame()
+  }
+
+}
+
 // Add a click event listener to each cell.
 cells.forEach((cell, index) => {
   cell.addEventListener("click", () => {
+    if(board[index] !== ''){
+      return
+    }
     // Update the board state with the current player's symbol.
     board[index] = currentTurn;
     
@@ -73,7 +87,10 @@ cells.forEach((cell, index) => {
     
     // Check for a winner after each move.
     checkWinner();
-    
+
+    checkTie();
+
+    //check for tie//
     // Switch turns between players.
     if (currentTurn == playerOne) {
       currentTurn = playerTwo;
@@ -82,6 +99,8 @@ cells.forEach((cell, index) => {
     }
   });
 });
+
+
 
 // Function to reset the game state.
 const resetGame = () => {
@@ -104,3 +123,4 @@ const resetGame = () => {
 
 // Add a click event listener to the reset button to reset the game.
 resetBtn.addEventListener("click", resetGame);
+
